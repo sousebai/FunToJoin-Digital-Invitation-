@@ -254,15 +254,17 @@ export default function Projects() {
         onClose={handleCloseModal}
         maxWidth="md"
         fullWidth
-        PaperProps={{
-          sx: {
-            bgcolor: BG_PAPER,
-            color: 'text.primary',
-            backgroundImage: 'none',
-            border: `1px solid ${BORDER_ORANGE}`,
-            borderRadius: 2,
-            boxShadow: '0 24px 60px rgba(0, 0, 0, 0.8)',
-            overflow: 'hidden',
+        slotProps={{
+          paper: {
+            sx: {
+              bgcolor: BG_PAPER,
+              color: 'text.primary',
+              backgroundImage: 'none',
+              border: `1px solid ${BORDER_ORANGE}`,
+              borderRadius: 2,
+              boxShadow: '0 24px 60px rgba(0, 0, 0, 0.8)',
+              overflow: 'hidden',
+            },
           },
         }}
       >

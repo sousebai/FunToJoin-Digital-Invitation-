@@ -1,5 +1,3 @@
-'use client';
-
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
@@ -24,6 +22,18 @@ const PERSONAL = [
   { label: 'AVAILABLE', value: 'Freelance / Full-time' },
   { label: 'LANGUAGES', value: 'Arabic · French · English' },
 ];
+
+const INTRO_PARAGRAPH_1 =
+  "I'm Mohamed Amine Rzeigui, a senior full-stack JavaScript engineer with 5+ years of professional experience building production-grade web applications from the ground up. I specialize in the MERN stack and the broader JavaScript ecosystem — crafting everything from real-time APIs and microservices to polished, responsive UIs.";
+
+const INTRO_PARAGRAPH_2 =
+  'My approach is simple: write clean, maintainable code and ship fast without cutting corners on quality. I thrive in cross-functional teams, contribute to architecture decisions, and mentor junior developers — because great software is built by great teams.';
+
+const INTRO_PARAGRAPH_3 =
+  'Whether it\'s a startup MVP that needs to launch yesterday or an enterprise platform that needs to scale to millions of users, I bring the same precision, professionalism, and passion to the work.';
+
+const QUOTE_TEXT =
+  '"I don\'t just build features — I build systems that last. Every line of code I write is a commitment to the people who will use it and the developers who will maintain it."';
 
 export default function About() {
   return (
@@ -63,27 +73,26 @@ export default function About() {
               variant="body1"
               sx={{ color: 'text.secondary', lineHeight: 1.8, mb: 2.5, fontSize: '0.97rem' }}
             >
-              I'm <strong style={{ color: '#fff' }}>Mohamed Amine Rzeigui</strong>, a senior full-stack JavaScript
-              engineer with 5+ years of professional experience building production-grade web applications from the
-              ground up. I specialize in the MERN stack and the broader JavaScript ecosystem — crafting everything
-              from real-time APIs and microservices to polished, responsive UIs.
+              I&apos;m{' '}
+              <Box component="span" sx={{ color: '#fff', fontWeight: 700 }}>
+                Mohamed Amine Rzeigui
+              </Box>
+              {', '}
+              {INTRO_PARAGRAPH_1.split(', ').slice(1).join(', ')}
             </Typography>
 
             <Typography
               variant="body1"
               sx={{ color: 'text.secondary', lineHeight: 1.8, mb: 2.5, fontSize: '0.97rem' }}
             >
-              My approach is simple: write clean, maintainable code and ship fast without cutting corners on quality.
-              I thrive in cross-functional teams, contribute to architecture decisions, and mentor junior developers —
-              because great software is built by great teams.
+              {INTRO_PARAGRAPH_2}
             </Typography>
 
             <Typography
               variant="body1"
               sx={{ color: 'text.secondary', lineHeight: 1.8, mb: 4, fontSize: '0.97rem' }}
             >
-              Whether it&apos;s a startup MVP that needs to launch yesterday or an enterprise platform that needs to scale
-              to millions of users, I bring the same precision, professionalism, and passion to the work.
+              {INTRO_PARAGRAPH_3}
             </Typography>
 
             {/* Highlights */}
@@ -156,8 +165,7 @@ export default function About() {
                   fontSize: '0.95rem',
                 }}
               >
-                &ldquo;I don&apos;t just build features — I build systems that last. Every line of code I write is a
-                commitment to the people who will use it and the developers who will maintain it.&rdquo;
+                {QUOTE_TEXT}
               </Typography>
               <Typography
                 variant="overline"

@@ -23,7 +23,7 @@ const CONTACT_INFO = [
   {
     icon: <EmailOutlinedIcon sx={{ color: ORANGE, fontSize: 20 }} />,
     label: 'EMAIL',
-    value: 'contact@marzeigui.dev',
+    value: 'medamine.rzeigui08@gmail.com',
   },
   {
     icon: <LocationOnOutlinedIcon sx={{ color: ORANGE, fontSize: 20 }} />,
