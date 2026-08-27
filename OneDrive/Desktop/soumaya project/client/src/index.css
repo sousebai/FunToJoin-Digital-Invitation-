@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+/* ── Tailwind v4 theme tokens ───────────────────────────────────────── */
+@theme {
+  --color-cream:    #FBF6F0;
+  --color-ink:      #3B2A2C;
+  --color-burgundy: #6E2433;
+  --color-gold:     #A98646;
+  --color-line:     #ECD8D2;
+  --color-blush:    #F2DAD4;
+  --color-muted:    #8B7A7B;
+  --color-rose:     #C98A82;
+
+  --font-family-display: "Cormorant Garamond", Georgia, serif;
+  --font-family-body:    Montserrat, system-ui, sans-serif;
+  --font-family-script:  "Great Vibes", cursive;
+}
+
+/* ── Base styles ────────────────────────────────────────────────────── */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: Montserrat, system-ui, sans-serif;
+    background-color: #FBF6F0;
+    color: #3B2A2C;
+  }
+
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #FBF6F0;
+  }
+
+  section {
+    overflow-x: clip;
+  }
+
+  /* Gold shimmer animation */
+  .gold-shimmer {
+    background: linear-gradient(90deg, #A98646, #D4AF6A, #A98646);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 3s infinite;
+  }
+
+  @keyframes shimmer {
+    0%   { background-position: 200% center; }
+    100% { background-position: -200% center; }
+  }
+
+  /* Ornamental divider */
+  .divider-ornament {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .divider-ornament::before,
+  .divider-ornament::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #ECD8D2, transparent);
+  }
+}
+
+/* ── Component shortcuts ────────────────────────────────────────────── */
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5
+           bg-burgundy text-cream font-medium tracking-wider
+           uppercase text-sm rounded-full transition-all duration-300
+           hover:opacity-90 hover:shadow-lg
+           active:scale-95 cursor-pointer;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5
+           border border-gold/60 text-gold font-medium tracking-wider
+           uppercase text-sm rounded-full transition-all duration-300
+           hover:bg-gold/10 active:scale-95 cursor-pointer;
+  }
+
+  .section-tag {
+    @apply block text-rose text-2xl mb-2;
+    font-family: "Great Vibes", cursive;
+  }
+
+  .section-title {
+    @apply text-4xl font-light text-ink leading-tight;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+  }
+
+  .card-glass {
+    @apply bg-white/60 backdrop-blur-sm border border-line/60 rounded-2xl;
+  }
+}
