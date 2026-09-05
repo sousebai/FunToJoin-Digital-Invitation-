@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+/* Luxury Soft Glassmorphism & Cards */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(226, 218, 206, 0.7);
+  box-shadow: 0 10px 30px -10px rgba(43, 39, 35, 0.05), 0 1px 3px rgba(43, 39, 35, 0.02);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(235, 228, 218, 0.9);
+  box-shadow: 0 4px 16px -2px rgba(43, 39, 35, 0.04);
+}
+
+.glass-gold {
+  background: linear-gradient(135deg, rgba(253, 248, 238, 0.95) 0%, rgba(247, 240, 227, 0.9) 100%);
+  border: 1px solid rgba(197, 160, 89, 0.35);
+  box-shadow: 0 15px 35px -10px rgba(197, 160, 89, 0.15);
+}
+
+.glass-rosedust {
+  background: linear-gradient(135deg, rgba(253, 246, 245, 0.95) 0%, rgba(247, 236, 235, 0.9) 100%);
+  border: 1px solid rgba(184, 107, 119, 0.3);
+  box-shadow: 0 15px 35px -10px rgba(184, 107, 119, 0.12);
+}
+
+/* Brushed Gold & Soft Gradients */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #B08745 0%, #C5A059 50%, #926A37 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-rose-gradient {
+  background: linear-gradient(135deg, #C27480 0%, #B86B77 50%, #8C434F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-sage-gradient {
+  background: linear-gradient(135deg, #5E8B7E 0%, #4A6B5D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Soft Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF7F2;
+}
+::-webkit-scrollbar-thumb {
+  background: #D8D0C5;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C5BAAD;
+}
